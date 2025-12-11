@@ -1,0 +1,16 @@
+build/
+
+**/.vscode/
+
+# Object files
+*.o
+*.obj
+
+# Libraries
+*.lib
+
+# Shared objects
+*.dll
+
+# Executables
+*.exe
