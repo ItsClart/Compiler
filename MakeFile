@@ -1,0 +1,25 @@
+
+GCC = gcc 
+SRC = $(wildcard src/*.c ) $(wildcard external/MemTrack/src/*.c)  
+
+OUTPUT = out.exe
+
+INCLUDE = -Iinclude -Iexternal/MemTrack/include -IC:\msys64\mingw64\include
+
+
+default: build run
+
+
+all: json build run 
+
+
+# this is for my clangd autocomplete
+json:
+	@compiledb -n -- make build  
+
+build:
+	@${GCC} -o ${OUTPUT} ${SRC} ${INCLUDE} -DTRACK_ALLOCATIONS
+
+run:
+	@${OUTPUT}
+
