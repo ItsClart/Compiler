@@ -1,6 +1,8 @@
 build/
 
 **/.vscode/
+.cache
+compile_commands.json
 
 # Object files
 *.o
