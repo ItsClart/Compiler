@@ -57,7 +57,7 @@ MemTrack_API void print_tracking_info(){
 
     printf("\nAllocation Information\n");
     while(current){
-        printf("Address %p - size %lld - Line %d - File %s\n", current->ptr, current->size, current->file_line, current->file_name);
+        printf("Size %lld - Line %d - File %s\n", current->size, current->file_line, current->file_name);
         current = current->next;
     }
     printf("\n");
